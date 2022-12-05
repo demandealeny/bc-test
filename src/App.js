@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo';
 import './style.css';
 
 const messages = {
@@ -35,7 +36,7 @@ function percentageCompletion(score, max) {
 
 function Score(skill) {
   const completion = percentageCompletion(skill.score, skill.scoreMax);
-  const completionVisual = roundNearest5(completion) + "";
+  const completionVisual = roundNearest5(completion) + '';
 
   return (
     <li className="skill">
@@ -46,7 +47,7 @@ function Score(skill) {
         </p>
       </div>
       <p className="skill__percentage" data-completion={completionVisual}>
-        <b>{completion + "%"}</b>
+        <b>{completion + '%'}</b>
       </p>
     </li>
   );
@@ -65,11 +66,13 @@ export default function App() {
 
   const totalScore = scores.reduce((total, skill) => skill.score + total, 0);
   const totalScoreMax = scoresMax.reduce((total, score) => score + total, 0);
-  const successRate = percentageCompletion(totalScore, totalScoreMax) + "%";
+  const successRate = percentageCompletion(totalScore, totalScoreMax) + '%';
 
   return (
     <>
+        <Logo />
       <header>
+
         <p>
           Vous avez terminé le questionnaire avec un taux de succés de
           <b> {successRate}</b>

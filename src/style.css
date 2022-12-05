@@ -21,10 +21,19 @@ body {
 }
 
 main,
-header {
+header, .logo {
   padding: 1rem;
   max-width: 40rem;
   margin: auto;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo img {
+  max-width: 20rem;
 }
 
 main hr {
