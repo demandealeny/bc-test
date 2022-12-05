@@ -18,7 +18,6 @@ function extractSkill(skill, skillKey, scoreMax) {
     return {};
   }
 
-  console.log(key, value, scoreMax)
   return {
     message: messages[key],
     score: value,
@@ -67,7 +66,7 @@ export default function App() {
   const totalScore = scores.reduce((total, skill) => skill.score + total, 0);
   const totalScoreMax = scoresMax.reduce((total, score) => score + total, 0);
   const successRate = percentageCompletion(totalScore, totalScoreMax) + "%";
-console.log(scoresMax, scores)
+
   return (
     <>
       <header>
