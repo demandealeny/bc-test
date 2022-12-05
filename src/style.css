@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #3c80f7;
+  --primary-color-light: #3c80f790;
+  --dark-color: #0d1f39;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Poppins, system-ui, sans-serif;
+  color: var(--dark-color);
+  background-color: white;
+}
+
+main,
+header {
+  padding: 1rem;
+  max-width: 40rem;
+  margin: auto;
+}
+
+main hr {
+  border-color: var(--primary-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+b {
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+}
+
+.title {
+  font-weight: 900;
+  color: var(--dark-color);
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skill__answers {
+  font-size: 90%;
+  color: var(--primary-color);
+}
+
+.skill__percentage {
+  width: 10rem;
+  height: 3rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill__percentage::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color-light);
+}
+
+.skill__percentage::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: lightgray;
+}
+
+[data-completion='0']::before {
+  right: 100%;
+}
+[data-completion='5']::before {
+  right: 95%;
+}
+[data-completion='10']::before {
+  right: 90%;
+}
+[data-completion='15']::before {
+  right: 85%;
+}
+[data-completion='20']::before {
+  right: 80%;
+}
+[data-completion='25']::before {
+  right: 75%;
+}
+[data-completion='30']::before {
+  right: 70%;
+}
+[data-completion='35']::before {
+  right: 65%;
+}
+[data-completion='40']::before {
+  right: 60%;
+}
+[data-completion='45']::before {
+  right: 55%;
+}
+[data-completion='50']::before {
+  right: 50%;
+}
+[data-completion='55']::before {
+  right: 45%;
+}
+[data-completion='60']::before {
+  right: 40%;
+}
+[data-completion='65']::before {
+  right: 35%;
+}
+[data-completion='70']::before {
+  right: 30%;
+}
+[data-completion='75']::before {
+  right: 25%;
+}
+[data-completion='80']::before {
+  right: 20%;
+}
+[data-completion='85']::before {
+  right: 15%;
+}
+[data-completion='90']::before {
+  right: 10%;
+}
+[data-completion='95']::before {
+  right: 5%;
+}
+[data-completion='100']::before {
+  right: 0%;
+}
+
