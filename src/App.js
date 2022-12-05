@@ -3,13 +3,13 @@ import Logo from './Logo';
 import './style.css';
 
 const messages = {
-  skillOne: "Approche et Accroche d'une talent tech",
-  skillTwo: 'Briefer debriefer et closer un process',
-  skillThree: 'Maitriser les metiers et le jargon tech',
-  skillFour: 'Prendre un brief et qualifier un job tech',
-  skillFive: 'Qualifier un profil technique',
-  skillSix: 'Structurer un process de recrutement',
-  skillSeven: 'Superviser un onboarding',
+  skillOne: "Prendre un brief et qualifier un projet de recrutement",
+  skillTwo: 'Structurer un process de sélection pour un candidat tech',
+  skillThree: 'Sourcer les meilleurs profils techs',
+  skillFour: 'Qualifier un talent tech en réalisant son bilan de carrière',
+  skillFive: 'Closer ses recrutements en réalisant des débriefings motivants',
+  skillSix: "Superviser l'onboarding de ses recrues techs",
+  skillSeven: "Maitriser le jargon IT afin d'être crédible et pertinent",
 };
 
 function extractSkill(skill, skillKey, scoreMax) {
