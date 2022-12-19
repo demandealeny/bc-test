@@ -64,18 +64,17 @@ export default function App() {
     .filter((skill) => !skill.match(/Max=/))
     .map((skill, key) => extractSkill(skill, key, scoresMax));
 
-  const totalScore = scores.reduce((total, skill) => skill.score + total, 0);
-  const totalScoreMax = scoresMax.reduce((total, score) => score + total, 0);
-  const successRate = percentageCompletion(totalScore, totalScoreMax) + '%';
+  const weightedMax = scores.reduce((total) => 100 + total, 0)
+  const weightedScore = scores.reduce((total, skill) => percentageCompletion(skill.score, skill.scoreMax) + total, 0)
+  const weightedSuccessRate = percentageCompletion(weightedScore, weightedMax) + "%"
 
   return (
     <>
         <Logo />
       <header>
-
         <p>
           Vous avez terminé le questionnaire avec un taux de succés de
-          <b> {successRate}</b>
+          <b> {weightedSuccessRate}</b>
         </p>
       </header>
       <main>
